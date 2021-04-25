@@ -5,7 +5,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Threading;
 
-namespace LittleSnowFall
+namespace FlowerFall
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -25,12 +25,12 @@ namespace LittleSnowFall
         private void MainWindowLoaded(object sender, RoutedEventArgs e)
         {
             var timer = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(100) };
-            timer.Tick += (s, arg) => Snow();
+            timer.Tick += (s, arg) => Fall();
             timer.Start();
         }
 
         readonly Random _random = new Random((int)DateTime.Now.Ticks);
-        private void Snow()
+        private void Fall()
         {
             var xAmount = _random.Next(-500, (int)LayoutRoot.ActualWidth - 100);
             var yAmount = -100;
@@ -41,7 +41,7 @@ namespace LittleSnowFall
             ScaleTransform scaleTransform = new ScaleTransform(s, s);
             TranslateTransform translateTransform = new TranslateTransform(xAmount, yAmount);
 
-            var flake = new SnowFlake
+            var flake = new Flake
             {
                 RenderTransform = new TransformGroup
                 {
@@ -73,7 +73,7 @@ namespace LittleSnowFall
 
         }
 
-        private static DoubleAnimation GenerateAnimation(int x, Duration duration, SnowFlake flake, string propertyPath)
+        private static DoubleAnimation GenerateAnimation(int x, Duration duration, Flake flake, string propertyPath)
         {
             DoubleAnimation animation = new DoubleAnimation
             {

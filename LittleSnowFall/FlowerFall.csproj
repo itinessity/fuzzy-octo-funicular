@@ -4,7 +4,9 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>presents.ico</ApplicationIcon>
+    <ApplicationIcon>rose.ico</ApplicationIcon>
+    <AssemblyName>FlowerFall</AssemblyName>
+    <RootNamespace>FlowerFall</RootNamespace>
   </PropertyGroup>
 
 </Project>

@@ -11,14 +11,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LittleSnowFall
+namespace FlowerFall
 {
     /// <summary>
     /// Interaction logic for SnowFlake.xaml
     /// </summary>
-    public partial class SnowFlake : UserControl
+    public partial class Flake : UserControl
     {
-        public SnowFlake()
+        public Flake()
         {
             InitializeComponent();
         }
